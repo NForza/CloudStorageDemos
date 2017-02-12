@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoWebJob", "DemoWebJob\DemoWebJob.csproj", "{3963D138-4E9C-4C08-96F7-0ED641FC6167}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueMessageSender", "QueueMessageSender\QueueMessageSender.csproj", "{BC137916-E1AC-43BE-B0B3-C10CAA279565}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueMessageReceiver", "QueueMessageReceiver\QueueMessageReceiver.csproj", "{BB5B2E6E-D0B8-443E-82F8-0AB92DB5E21F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3963D138-4E9C-4C08-96F7-0ED641FC6167}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3963D138-4E9C-4C08-96F7-0ED641FC6167}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3963D138-4E9C-4C08-96F7-0ED641FC6167}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3963D138-4E9C-4C08-96F7-0ED641FC6167}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC137916-E1AC-43BE-B0B3-C10CAA279565}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC137916-E1AC-43BE-B0B3-C10CAA279565}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC137916-E1AC-43BE-B0B3-C10CAA279565}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC137916-E1AC-43BE-B0B3-C10CAA279565}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB5B2E6E-D0B8-443E-82F8-0AB92DB5E21F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB5B2E6E-D0B8-443E-82F8-0AB92DB5E21F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB5B2E6E-D0B8-443E-82F8-0AB92DB5E21F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB5B2E6E-D0B8-443E-82F8-0AB92DB5E21F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
