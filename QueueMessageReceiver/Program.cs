@@ -21,12 +21,16 @@ namespace QueueMessageReceiver
 
             var nextMessage = queue.GetMessage(TimeSpan.FromSeconds(10));
             while (true)
-            {               
-                if (nextMessage==null)
+            {
+                if (nextMessage == null)
+                {
                     Console.WriteLine("No message in q");
+                }
                 else
+                {
                     Console.WriteLine($"Data from q: {nextMessage.AsString}");
-
+                    queue.DeleteMessage(nextMessage);
+                }
                 nextMessage = queue.GetMessage(TimeSpan.FromSeconds(10));
                 System.Threading.Thread.Sleep(500);
             }
