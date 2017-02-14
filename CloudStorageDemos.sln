@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueMessageReceiver", "Que
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureTables", "AzureTables\AzureTables.csproj", "{3748C294-5C28-41BA-AD9C-B1E0E741CB60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlobStorage", "BlobStorage\BlobStorage.csproj", "{900EF700-185A-4ED2-8309-B896A46F7172}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{3748C294-5C28-41BA-AD9C-B1E0E741CB60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3748C294-5C28-41BA-AD9C-B1E0E741CB60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3748C294-5C28-41BA-AD9C-B1E0E741CB60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{900EF700-185A-4ED2-8309-B896A46F7172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{900EF700-185A-4ED2-8309-B896A46F7172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{900EF700-185A-4ED2-8309-B896A46F7172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{900EF700-185A-4ED2-8309-B896A46F7172}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
