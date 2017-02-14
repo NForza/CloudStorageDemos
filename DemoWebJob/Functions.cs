@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Azure.WebJobs;
+using Microsoft.WindowsAzure.Storage.Blob;
 
 namespace DemoWebJob
 {
@@ -17,9 +18,10 @@ namespace DemoWebJob
             log.WriteLine($"A: {message}");
         }
 
-        public static void ProcessQueueMessage2([QueueTrigger("queue")] string message, TextWriter log)
+        public static void BackupFiles([BlobTrigger("images/{name}")] CloudBlockBlob imageFile, [Blob("backups/{name}",FileAccess.Write)] Stream backupFile, TextWriter log)
         {
-            log.WriteLine($"B: {message}");
+            log.WriteLine($"Backing up file {imageFile.Name}");
+            imageFile.DownloadToStream(backupFile);
         }
 
     }
