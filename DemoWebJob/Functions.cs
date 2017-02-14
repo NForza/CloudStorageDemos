@@ -14,7 +14,13 @@ namespace DemoWebJob
         // on an Azure Queue called queue.
         public static void ProcessQueueMessage([QueueTrigger("queue")] string message, TextWriter log)
         {
-            log.WriteLine(message);
+            log.WriteLine($"A: {message}");
         }
+
+        public static void ProcessQueueMessage2([QueueTrigger("queue")] string message, TextWriter log)
+        {
+            log.WriteLine($"B: {message}");
+        }
+
     }
 }
