@@ -13,7 +13,7 @@ namespace ServiceBusClient
     {
         static void Main(string[] args)
         {
-            ChannelFactory<ICalculator> cf = GetLocalConnection();
+            ChannelFactory<ICalculator> cf = GetServiceBusRelayConnection();
 
             var ch = cf.CreateChannel();
             Console.WriteLine(ch.Add(4, 5));
@@ -34,10 +34,10 @@ namespace ServiceBusClient
         {
             var cf = new ChannelFactory<ICalculator>(
                                 new NetTcpRelayBinding(),
-                                new EndpointAddress(ServiceBusEnvironment.CreateServiceUri("sb", "namespace", "calculator")));
+                                new EndpointAddress(ServiceBusEnvironment.CreateServiceUri("sb", "YOURENVIRONMENT", "calculator")));
 
             cf.Endpoint.Behaviors.Add(new TransportClientEndpointBehavior
-            { TokenProvider = TokenProvider.CreateSharedAccessSignatureTokenProvider("RootManageSharedAccessKey", "<yourKey>") });
+            { TokenProvider = TokenProvider.CreateSharedAccessSignatureTokenProvider("RootManageSharedAccessKey", "YOURKEY") });
             return cf;
         }
     }

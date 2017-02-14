@@ -31,8 +31,8 @@ namespace BlobStorage
 
         private static void UploadFile(CloudBlobContainer container, string fileName)
         {
-            CloudBlockBlob blockBlob = container.GetBlockBlobReference(fileName); 
-                      
+            CloudBlockBlob blockBlob = container.GetBlockBlobReference(fileName);
+            
             using (var fileStream = System.IO.File.OpenRead(fileName))
             {
                 blockBlob.UploadFromStream(fileStream);

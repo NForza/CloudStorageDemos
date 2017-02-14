@@ -17,7 +17,7 @@ namespace ServiceBusRelayService
 
             ListenOnLocalEndpoint(sh);
 
-            //ListenOnServicebusRelayEndpoint(sh);
+            ListenOnServicebusRelayEndpoint(sh);
 
             sh.Open();
             Console.WriteLine("Press ENTER to close");
@@ -29,10 +29,10 @@ namespace ServiceBusRelayService
         {
             sh.AddServiceEndpoint(
                typeof(ICalculator), new NetTcpRelayBinding(),
-               ServiceBusEnvironment.CreateServiceUri("sb", "namespace", "calculator"))
+               ServiceBusEnvironment.CreateServiceUri("sb", "YOURENVIRONMENT", "calculator"))
                 .Behaviors.Add(new TransportClientEndpointBehavior
                 {
-                    TokenProvider = TokenProvider.CreateSharedAccessSignatureTokenProvider("RootManageSharedAccessKey", "<yourKey>")
+                    TokenProvider = TokenProvider.CreateSharedAccessSignatureTokenProvider("RootManageSharedAccessKey", "YOURKEY")
                 });
         }
 

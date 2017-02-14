@@ -62,7 +62,7 @@ namespace AzureTables
 
             AddMoreEmployees(table);
 
-            var qry = new TableQuery<EmployeeRecord>();//.Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, "Smith"));
+            var qry = new TableQuery<EmployeeRecord>().Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, "Smith"));
             foreach (var e in table.ExecuteQuery(qry))
             {
                 Console.WriteLine(e);
